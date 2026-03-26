@@ -226,7 +226,7 @@ img {
    =================================== */
 .hero {
     position: relative;
-    /* Banner 背景图片 - 无遮罩，直接显示 */
+    /* Banner 背景图片 - 直接显示在最上层 */
     background-color: #f0f0f0;  /* fallback 颜色 */
     background-image: url('../uploads/upload_0.jpg');
     background-position: center center;
@@ -235,25 +235,42 @@ img {
     min-height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 6rem 0;
     overflow: hidden;
 }
 
+/* 移除 overlay，图片直接显示 */
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(107,76,154,0.7) 0%, rgba(155,89,182,0.5) 100%);
-    z-index: 1;
+    display: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: var(--white);
+    /* 文字加白色背景卡片，保证可读性 */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-shadow: none;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: var(--text);
+    line-height: 1.8;
 }
 
 .hero-overlay {
@@ -289,39 +306,43 @@ img {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: var(--radius);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
     font-weight: 600;
     text-align: center;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    font-size: 1.05rem;
 }
 
 .btn-primary {
     background: var(--primary);
     color: var(--white);
+    box-shadow: 0 4px 15px rgba(107, 76, 154, 0.3);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 25px rgba(107, 76, 154, 0.4);
 }
 
 .btn-secondary {
     background: var(--white);
     color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .btn-secondary:hover {
-    background: var(--background);
+    background: var(--primary);
+    color: var(--white);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 25px rgba(107, 76, 154, 0.4);
 }
 
 .btn-white {
@@ -353,7 +374,9 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 2px solid var(--background);
 }
 
 .stat-item {
@@ -365,12 +388,13 @@ img {
     font-size: 2.5rem;
     font-weight: 700;
     font-family: 'Playfair Display', serif;
+    color: var(--primary);
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    opacity: 0.9;
+    color: var(--text-light);
 }
 
 /* ===================================
