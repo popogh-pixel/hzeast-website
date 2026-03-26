@@ -20,7 +20,7 @@ const i18n = {
             
             // 首页 Hero - Banner 1
             'hero-title': '33 年专业服装制造经验',
-            'hero-subtitle': '专注梭织女装、童装，月产能 50,000 件<br>ISO9001 & BSCI 认证，出口欧洲澳洲 30+ 国家',
+            'hero-subtitle': '专注梭织女装，月产能 50,000 件<br>ISO9001 & BSCI 认证，出口欧洲澳洲 30+ 国家',
             'hero-btn-quote': '📧 获取报价',
             'hero-btn-products': '👗 查看产品',
             
@@ -32,7 +32,7 @@ const i18n = {
             
             // 首页 Hero - Banner 3
             'hero-title-3': '优质面料，多样选择',
-            'hero-subtitle-3': '全球采购优质面料<br>梭织女装、童装，款式多样',
+            'hero-subtitle-3': '全球采购优质面料<br>梭织女装，款式多样',
             
             // 统计数据
             'hero-stats-year': '成立年份',
@@ -52,7 +52,7 @@ const i18n = {
             'feature-team-title': '专业团队',
             'feature-team-desc': '141 名熟练工人<br>5 人技术团队（版师 + 样衣工）',
             'feature-products-title': '产品丰富',
-            'feature-products-desc': '梭织女装、童装<br>裤子、衬衫、夹克、西装、连衣裙、羽绒服',
+            'feature-products-desc': '梭织女装<br>裤子、衬衫、夹克、西装、连衣裙、羽绒服',
             'feature-custom-title': '灵活定制',
             'feature-custom-desc': 'OEM/ODM 服务<br>MOQ: 500-1000 件',
             
@@ -64,7 +64,6 @@ const i18n = {
             'product-pants': '裤子',
             'product-jacket': '夹克',
             'product-suit': '西装',
-            'product-kids': '童装',
             'product-moq': 'MOQ: 500 件',
             'products-more': '查看全部产品 →',
             
@@ -80,7 +79,7 @@ const i18n = {
             
             // 页脚
             'footer-company': '杭州伊斯特服装有限公司',
-            'footer-desc': '33 年专业服装制造经验<br>专注梭织女装、童装',
+            'footer-desc': '33 年专业服装制造经验<br>专注梭织女装',
             'footer-links': '快速链接',
             'footer-products': '主营产品',
             'footer-contact': '联系方式',
@@ -106,7 +105,7 @@ const i18n = {
             
             // Hero - Banner 1
             'hero-title': '33 Years of Professional Garment Manufacturing',
-            'hero-subtitle': 'Specializing in woven women\'s and children\'s clothing, monthly capacity 50,000 pieces<br>ISO9001 & BSCI certified, exporting to 30+ countries in Europe and Australia',
+            'hero-subtitle': 'Specializing in woven women\'s clothing, monthly capacity 50,000 pieces<br>ISO9001 & BSCI certified, exporting to 30+ countries in Europe and Australia',
             'hero-btn-quote': '📧 Get Quote',
             'hero-btn-products': '👗 View Products',
             
@@ -118,7 +117,7 @@ const i18n = {
             
             // Hero - Banner 3
             'hero-title-3': 'Quality Fabrics, Diverse Selection',
-            'hero-subtitle-3': 'Premium fabrics sourced globally<br>Women\'s and children\'s woven wear, diverse styles',
+            'hero-subtitle-3': 'Premium fabrics sourced globally<br>Women\'s woven wear, diverse styles',
             
             // Stats
             'hero-stats-year': 'Founded',
@@ -138,7 +137,7 @@ const i18n = {
             'feature-team-title': 'Professional Team',
             'feature-team-desc': '141 skilled workers<br>5-person technical team',
             'feature-products-title': 'Diverse Products',
-            'feature-products-desc': 'Women\'s and children\'s wear<br>Pants, shirts, jackets, suits, dresses, down jackets',
+            'feature-products-desc': 'Women\'s wear<br>Pants, shirts, jackets, suits, dresses, down jackets',
             'feature-custom-title': 'Flexible Customization',
             'feature-custom-desc': 'OEM/ODM services<br>MOQ: 500-1000 pieces',
             
@@ -155,8 +154,6 @@ const i18n = {
             'product-jacket-desc': 'Fashion jackets and outerwear',
             'product-suit': 'Suits & Blazers',
             'product-suit-desc': 'Business and casual suits',
-            'product-kids': 'Children\'s Wear',
-            'product-kids-desc': 'Safe and comfortable kids clothing',
             'product-moq': 'MOQ: 500 pcs',
             'products-more': 'View All Products →',
             
@@ -172,7 +169,7 @@ const i18n = {
             
             // Footer
             'footer-company': 'Hangzhou East Clothing Co., Ltd.',
-            'footer-desc': '33 years of professional garment manufacturing<br>Specializing in woven women\'s and children\'s wear',
+            'footer-desc': '33 years of professional garment manufacturing<br>Specializing in woven women\'s wear',
             'footer-links': 'Quick Links',
             'footer-products': 'Main Products',
             'footer-contact': 'Contact Us',
