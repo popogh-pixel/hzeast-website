@@ -109,7 +109,7 @@ img {
     font-weight: 700;
     font-family: 'Playfair Display', serif;
     line-height: 1.2;
-    color: var(--text);
+    color: var(--primary);  /* 紫色，与品牌色统一 */
     display: block;
 }
 

@@ -176,12 +176,26 @@ const i18n = {
         const logoCn = document.querySelector('.logo-text-cn');
         const logoEn = document.querySelector('.logo-text-en');
         
+        console.log('Switching to:', this.currentLang);
+        
         if (this.currentLang === 'en') {
-            if (logoCn) logoCn.style.display = 'none';
-            if (logoEn) logoEn.style.display = 'block';
+            if (logoCn) {
+                logoCn.style.display = 'none';
+                console.log('Hiding CN logo text');
+            }
+            if (logoEn) {
+                logoEn.style.display = 'block';
+                console.log('Showing EN logo text');
+            }
         } else {
-            if (logoCn) logoCn.style.display = 'block';
-            if (logoEn) logoEn.style.display = 'none';
+            if (logoCn) {
+                logoCn.style.display = 'block';
+                console.log('Showing CN logo text');
+            }
+            if (logoEn) {
+                logoEn.style.display = 'none';
+                console.log('Hiding EN logo text');
+            }
         }
         
         // 更新所有带 data-i18n 属性的元素
@@ -205,6 +219,8 @@ const i18n = {
                 btn.classList.add('active');
             }
         });
+        
+        console.log('Language updated to:', this.currentLang);
     },
     
     // 获取翻译
