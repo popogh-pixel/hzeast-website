@@ -3,19 +3,20 @@
    设计风格：温暖专业（大地色系）
    =================================== */
 
-/* CSS 变量 - 配色方案 */
+/* CSS 变量 - 配色方案（根据 Logo 紫色系定制） */
 :root {
-    --primary: #8B7355;        /* 咖啡色 - 主色 */
-    --primary-dark: #6D5A43;   /* 深咖啡 */
-    --secondary: #C4B09A;      /* 卡其色 - 辅色 */
-    --background: #F5F1E8;     /* 米白色 - 背景 */
-    --background-light: #FAF8F5; /* 浅米白 */
+    --primary: #6B4C9A;        /* 紫水晶色 - 主色 (从 Logo 提取) */
+    --primary-dark: #523A7A;   /* 深紫色 */
+    --primary-light: #8B6FB8;  /* 浅紫色 */
+    --secondary: #9B59B6;      /* 紫罗兰色 - 辅色 */
+    --background: #F8F5FC;     /* 淡紫色背景 */
+    --background-light: #FAF8FF; /* 浅紫白 */
     --text: #2D2D2D;           /* 深灰 - 文字 */
     --text-light: #666666;     /* 浅灰 - 次要文字 */
-    --accent: #D4AF37;         /* 金色 - 强调 */
+    --accent: #B983C7;         /* 淡紫强调色 */
     --white: #FFFFFF;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --shadow: 0 4px 6px rgba(107, 76, 154, 0.1);
+    --shadow-lg: 0 10px 25px rgba(107, 76, 154, 0.15);
     --radius: 8px;
     --radius-lg: 12px;
 }
@@ -85,20 +86,31 @@ img {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
     color: var(--primary);
 }
 
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     font-family: 'Playfair Display', serif;
+    line-height: 1.2;
 }
 
 .logo-sub {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-light);
     letter-spacing: 1px;
+    display: block;
+    margin-top: 0.25rem;
 }
 
 .nav-menu {
@@ -202,8 +214,8 @@ img {
    =================================== */
 .hero {
     position: relative;
-    /* Banner 背景图片 */
-    background: linear-gradient(135deg, rgba(139,115,85,0.8) 0%, rgba(196,176,154,0.8) 100%), 
+    /* Banner 背景图片 - 紫色渐变遮罩 */
+    background: linear-gradient(135deg, rgba(107,76,154,0.85) 0%, rgba(155,89,182,0.75) 100%), 
                 url('../uploads/upload_0.jpg') center/cover no-repeat;
     min-height: 90vh;
     display: flex;
