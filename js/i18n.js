@@ -72,6 +72,10 @@ const i18n = {
             'footer-contact': '联系方式',
             'footer-rights': '© 2026 杭州伊斯特服装有限公司。All rights reserved.',
             
+            // Logo
+            'logo-text': '杭州伊斯特服装',
+            'logo-text-en': 'East Clothing',
+            
             // 语言切换
             'lang-zh': '中文',
             'lang-en': 'English'
@@ -140,6 +144,10 @@ const i18n = {
             'footer-contact': 'Contact Us',
             'footer-rights': '© 2026 Hangzhou East Clothing Co., Ltd. All rights reserved.',
             
+            // Logo
+            'logo-text': '杭州伊斯特服装',
+            'logo-text-en': 'East Clothing',
+            
             // Language Switcher
             'lang-zh': '中文',
             'lang-en': 'English'
@@ -163,6 +171,18 @@ const i18n = {
     // 更新页面语言
     updatePageLanguage() {
         document.documentElement.lang = this.currentLang;
+        
+        // 特殊处理 Logo 中英文切换
+        const logoCn = document.querySelector('.logo-text-cn');
+        const logoEn = document.querySelector('.logo-text-en');
+        
+        if (this.currentLang === 'en') {
+            if (logoCn) logoCn.style.display = 'none';
+            if (logoEn) logoEn.style.display = 'block';
+        } else {
+            if (logoCn) logoCn.style.display = 'block';
+            if (logoEn) logoEn.style.display = 'none';
+        }
         
         // 更新所有带 data-i18n 属性的元素
         document.querySelectorAll('[data-i18n]').forEach(element => {

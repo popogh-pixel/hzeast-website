@@ -103,19 +103,26 @@ img {
     flex-direction: column;
 }
 
-.logo-text {
-    font-size: 1.4rem;
+.logo-text-cn,
+.logo-text-en {
+    font-size: 1.1rem;
     font-weight: 700;
     font-family: 'Playfair Display', serif;
     line-height: 1.2;
     color: var(--text);
+    display: block;
+}
+
+.logo-text-en {
+    display: none;
 }
 
 .logo-sub {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-light);
     letter-spacing: 1px;
     margin-top: 0.25rem;
+    display: block;
 }
 
 .nav-menu {
@@ -219,10 +226,9 @@ img {
    =================================== */
 .hero {
     position: relative;
-    /* Banner 背景图片 - 紫色渐变遮罩 */
-    background-color: #6B4C9A;  /* fallback 颜色 */
-    background-image: linear-gradient(135deg, rgba(107,76,154,0.85) 0%, rgba(155,89,182,0.75) 100%), 
-                      url('../uploads/upload_0.jpg');
+    /* Banner 背景图片 - 无遮罩，直接显示 */
+    background-color: #f0f0f0;  /* fallback 颜色 */
+    background-image: url('../uploads/upload_0.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -231,6 +237,23 @@ img {
     align-items: center;
     padding: 6rem 0;
     overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(107,76,154,0.7) 0%, rgba(155,89,182,0.5) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
 }
 
 .hero-overlay {
