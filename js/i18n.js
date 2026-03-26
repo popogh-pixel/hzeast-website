@@ -181,7 +181,31 @@ const i18n = {
             
             // Language Switcher
             'lang-zh': '中文',
-            'lang-en': 'English'
+            'lang-en': 'English',
+            
+            // About Page
+            'about-nav-title': 'About Us',
+            'about-hero-title': 'About Us',
+            'about-hero-subtitle': '33 years of professional garment manufacturing, your trusted partner',
+            'about-section-title': 'Company Overview',
+            'about-lead': 'Hangzhou East Clothing Co., Ltd., founded in 1993, is a modern garment enterprise specializing in R&D, production and sales of woven women\'s wear.',
+            'about-stat-experience': 'Years Experience',
+            'about-stat-factory': 'sqm Factory',
+            'about-stat-workers': 'Employees',
+            'about-stat-capacity': 'Monthly Capacity (pcs)',
+            'about-text2': 'Located in Lin\'an District, Hangzhou, Zhejiang, our company enjoys superior location and convenient transportation. After over 30 years of development, we have become one of the influential garment manufacturers in the Yangtze River Delta region.',
+            
+            // About Page
+            'about-nav-title': '关于我们',
+            'about-hero-title': '关于我们',
+            'about-hero-subtitle': '33 年专业服装制造经验，值得信赖的合作伙伴',
+            'about-section-title': '公司概况',
+            'about-lead': '杭州伊斯特服装有限公司成立于 1993 年，是一家专业致力于梭织女装研发、生产和销售的现代化服装企业。',
+            'about-stat-experience': '年行业经验',
+            'about-stat-factory': '平方米厂房',
+            'about-stat-workers': '名员工',
+            'about-stat-capacity': '月产能 (件)',
+            'about-text2': '公司位于浙江省杭州市临安区，地理位置优越，交通便利。经过 30 余年的发展，已成为长三角地区具有影响力的服装制造企业之一。'
         }
     },
     

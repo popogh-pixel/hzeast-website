@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO -->
-    <title>关于我们 | 杭州伊斯特服装有限公司 - 33 年专业服装制造商</title>
+    <title data-i18n-page="about-title">关于我们 | 杭州伊斯特服装有限公司 - 33 年专业服装制造商</title>
     <meta name="description" content="杭州伊斯特服装有限公司成立于 1993 年，33 年专业服装制造经验。ISO9001 & BSCI 认证，141 名熟练工人，月产能 50,000 件，出口欧洲澳洲 30+ 国家。">
     <meta name="keywords" content="杭州伊斯特服装，服装厂历史，ISO9001 认证，BSCI 认证，服装制造企业">
     
@@ -24,12 +24,16 @@
                     <span class="logo-sub">Since 1993</span>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">首页</a></li>
-                    <li><a href="about.html" class="nav-link active">关于我们</a></li>
-                    <li><a href="products.html" class="nav-link">产品展示</a></li>
-                    <li><a href="process.html" class="nav-link">生产流程</a></li>
-                    <li><a href="contact.html" class="nav-link">联系我们</a></li>
-                    <li><a href="contact.html" class="btn-quote">获取报价</a></li>
+                    <li><a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a></li>
+                    <li><a href="about.html" class="nav-link active" data-i18n="nav-about">关于我们</a></li>
+                    <li><a href="products.html" class="nav-link" data-i18n="nav-products">产品展示</a></li>
+                    <li><a href="process.html" class="nav-link" data-i18n="nav-process">生产流程</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a></li>
+                    <li><a href="contact.html" class="btn-quote" data-i18n="nav-quote">获取报价</a></li>
+                    <li class="lang-switcher">
+                        <button class="lang-switch-btn active" data-lang="zh" onclick="i18n.setLanguage('zh')">中文</button>
+                        <button class="lang-switch-btn" data-lang="en" onclick="i18n.setLanguage('en')">EN</button>
+                    </li>
                 </ul>
                 <button class="mobile-menu-btn" aria-label="菜单">
                     <span></span>
@@ -45,8 +49,8 @@
         <section class="page-hero">
             <div class="page-hero-overlay"></div>
             <div class="container page-hero-content">
-                <h1>关于我们</h1>
-                <p>33 年专业服装制造经验，值得信赖的合作伙伴</p>
+                <h1 data-i18n="about-hero-title">关于我们</h1>
+                <p data-i18n="about-hero-subtitle">33 年专业服装制造经验，值得信赖的合作伙伴</p>
             </div>
         </section>
 
@@ -55,29 +59,29 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-text">
-                        <h2 class="section-title">公司概况</h2>
-                        <p class="lead">杭州伊斯特服装有限公司成立于 1993 年，是一家专业致力于梭织女装、童装研发、生产和销售的现代化服装企业。</p>
+                        <h2 class="section-title" data-i18n="about-section-title">公司概况</h2>
+                        <p class="lead" data-i18n="about-lead">杭州伊斯特服装有限公司成立于 1993 年，是一家专业致力于梭织女装研发、生产和销售的现代化服装企业。</p>
                         
                         <div class="about-stats">
                             <div class="stat-box">
                                 <span class="stat-number">33</span>
-                                <span class="stat-label">年行业经验</span>
+                                <span class="stat-label" data-i18n="about-stat-experience">年行业经验</span>
                             </div>
                             <div class="stat-box">
                                 <span class="stat-number">8,600</span>
-                                <span class="stat-label">平方米厂房</span>
+                                <span class="stat-label" data-i18n="about-stat-factory">平方米厂房</span>
                             </div>
                             <div class="stat-box">
                                 <span class="stat-number">141</span>
-                                <span class="stat-label">名员工</span>
+                                <span class="stat-label" data-i18n="about-stat-workers">名员工</span>
                             </div>
                             <div class="stat-box">
                                 <span class="stat-number">50K+</span>
-                                <span class="stat-label">月产能 (件)</span>
+                                <span class="stat-label" data-i18n="about-stat-capacity">月产能 (件)</span>
                             </div>
                         </div>
 
-                        <p>公司位于浙江省杭州市临安区，地理位置优越，交通便利。经过 30 余年的发展，已成为长三角地区具有影响力的服装制造企业之一。</p>
+                        <p data-i18n="about-text2">公司位于浙江省杭州市临安区，地理位置优越，交通便利。经过 30 余年的发展，已成为长三角地区具有影响力的服装制造企业之一。</p>
                     </div>
                     <div class="about-image">
                         <div class="image-placeholder">
@@ -319,5 +323,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>
