@@ -2,8 +2,65 @@
  * 杭州伊斯特服装有限公司 - 官网主逻辑
  */
 
+// 轮播控制
+const slider = {
+    currentSlide: 0,
+    slides: [],
+    interval: null,
+    
+    init() {
+        this.slides = document.querySelectorAll('.slider-slide');
+        if (this.slides.length > 0) {
+            this.startAutoPlay();
+            console.log('🎠 Banner slider initialized');
+        }
+    },
+    
+    showSlide(index) {
+        this.slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            document.querySelectorAll('.dot')[i]?.classList.remove('active');
+        });
+        
+        this.slides[index].classList.add('active');
+        document.querySelectorAll('.dot')[index]?.classList.add('active');
+        this.currentSlide = index;
+    },
+    
+    next() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.showSlide(nextIndex);
+        this.resetAutoPlay();
+    },
+    
+    prev() {
+        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.showSlide(prevIndex);
+        this.resetAutoPlay();
+    },
+    
+    goToSlide(index) {
+        this.showSlide(index);
+        this.resetAutoPlay();
+    },
+    
+    startAutoPlay() {
+        this.interval = setInterval(() => {
+            this.next();
+        }, 5000); // 5 秒切换
+    },
+    
+    resetAutoPlay() {
+        clearInterval(this.interval);
+        this.startAutoPlay();
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🦐 杭州伊斯特服装官网已加载');
+    
+    // 初始化轮播
+    slider.init();
     
     // 初始化所有模块
     initMobileMenu();

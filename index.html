@@ -55,43 +55,29 @@
     </header>
 
     <main>
-        <!-- Hero 区域 -->
-        <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1 class="hero-title">
-                    33 年专业服装制造经验
-                </h1>
-                <p class="hero-subtitle">
-                    专注梭织女装、童装，月产能 50,000 件<br>
-                    ISO9001 & BSCI 认证，出口欧洲澳洲 30+ 国家
-                </p>
-                <div class="hero-buttons">
-                    <a href="pages/contact.html" class="btn btn-primary">
-                        📧 获取报价
-                    </a>
-                    <a href="pages/products.html" class="btn btn-secondary">
-                        👗 查看产品
-                    </a>
+        <!-- Hero 轮播 Banner -->
+        <section class="hero-slider">
+            <div class="slider-container">
+                <!-- Banner 1: 蓝色衬衫模特 -->
+                <div class="slider-slide active">
+                    <img src="uploads/upload_0.jpg" alt="服装制造" class="slider-image">
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">1993</span>
-                        <span class="stat-label">成立年份</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">月产能 (件)</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">141</span>
-                        <span class="stat-label">熟练工人</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">出口国家</span>
-                    </div>
+                <!-- Banner 2: 工厂/车间 -->
+                <div class="slider-slide">
+                    <img src="images/products/worker.jpg" alt="生产车间" class="slider-image" onerror="this.src='uploads/upload_0.jpg'">
                 </div>
+                <!-- Banner 3: 产品/面料 -->
+                <div class="slider-slide">
+                    <img src="images/products/fabric.jpg" alt="面料细节" class="slider-image" onerror="this.src='uploads/upload_0.jpg'">
+                </div>
+            </div>
+            <!-- 轮播控制 -->
+            <button class="slider-prev" onclick="slider.prev()">&#10094;</button>
+            <button class="slider-next" onclick="slider.next()">&#10095;</button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="slider.goToSlide(0)"></span>
+                <span class="dot" onclick="slider.goToSlide(1)"></span>
+                <span class="dot" onclick="slider.goToSlide(2)"></span>
             </div>
         </section>
 

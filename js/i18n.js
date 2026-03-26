@@ -168,51 +168,37 @@ const i18n = {
         }
     },
     
-    // 更新页面语言
+    // 更新页面语言（只影响导航栏和 Logo）
     updatePageLanguage() {
         document.documentElement.lang = this.currentLang;
         
-        // 特殊处理 Logo 中英文切换
+        console.log('Switching to:', this.currentLang);
+        
+        // 1. 切换 Logo 文字
         const logoCn = document.querySelector('.logo-text-cn');
         const logoEn = document.querySelector('.logo-text-en');
         
-        console.log('Switching to:', this.currentLang);
-        
         if (this.currentLang === 'en') {
-            if (logoCn) {
-                logoCn.style.display = 'none';
-                console.log('Hiding CN logo text');
-            }
-            if (logoEn) {
-                logoEn.style.display = 'block';
-                console.log('Showing EN logo text');
-            }
+            if (logoCn) logoCn.style.display = 'none';
+            if (logoEn) logoEn.style.display = 'block';
         } else {
-            if (logoCn) {
-                logoCn.style.display = 'block';
-                console.log('Showing CN logo text');
-            }
-            if (logoEn) {
-                logoEn.style.display = 'none';
-                console.log('Hiding EN logo text');
-            }
+            if (logoCn) logoCn.style.display = 'block';
+            if (logoEn) logoEn.style.display = 'none';
         }
         
-        // 更新所有带 data-i18n 属性的元素
-        document.querySelectorAll('[data-i18n]').forEach(element => {
+        // 2. 只更新导航栏的翻译
+        const navLinks = document.querySelectorAll('.nav-link, .btn-quote');
+        navLinks.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            const translation = this.translations[this.currentLang][key];
-            
-            if (translation) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = translation;
-                } else {
+            if (key) {
+                const translation = this.translations[this.currentLang][key];
+                if (translation) {
                     element.innerHTML = translation;
                 }
             }
         });
         
-        // 更新语言切换按钮状态
+        // 3. 更新语言切换按钮状态
         document.querySelectorAll('.lang-switch-btn').forEach(btn => {
             btn.classList.remove('active');
             if (btn.getAttribute('data-lang') === this.currentLang) {
@@ -220,7 +206,8 @@ const i18n = {
             }
         });
         
-        console.log('Language updated to:', this.currentLang);
+        console.log('Navigation language updated to:', this.currentLang);
+        console.log('Note: Only navigation bar and logo change language. Main content stays in Chinese.');
     },
     
     // 获取翻译
