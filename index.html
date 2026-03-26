@@ -26,16 +26,21 @@
         <nav class="navbar">
             <div class="container nav-container">
                 <a href="index.html" class="logo">
-                    <span class="logo-text">杭州伊斯特服装</span>
+                    <img src="images/logo.png" alt="杭州伊斯特服装 Logo" class="logo-image" onerror="this.style.display='none';this.parentElement.querySelector('.logo-text-fallback').style.display='block';">
+                    <span class="logo-text logo-text-fallback" style="display:none;">杭州伊斯特服装</span>
                     <span class="logo-sub">Since 1993</span>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">首页</a></li>
-                    <li><a href="pages/about.html" class="nav-link">关于我们</a></li>
-                    <li><a href="pages/products.html" class="nav-link">产品展示</a></li>
-                    <li><a href="pages/process.html" class="nav-link">生产流程</a></li>
-                    <li><a href="pages/contact.html" class="nav-link">联系我们</a></li>
-                    <li><a href="pages/contact.html" class="btn-quote">获取报价</a></li>
+                    <li><a href="index.html" class="nav-link active" data-i18n="nav-home">首页</a></li>
+                    <li><a href="pages/about.html" class="nav-link" data-i18n="nav-about">关于我们</a></li>
+                    <li><a href="pages/products.html" class="nav-link" data-i18n="nav-products">产品展示</a></li>
+                    <li><a href="pages/process.html" class="nav-link" data-i18n="nav-process">生产流程</a></li>
+                    <li><a href="pages/contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a></li>
+                    <li><a href="pages/contact.html" class="btn-quote" data-i18n="nav-quote">获取报价</a></li>
+                    <li class="lang-switcher">
+                        <button class="lang-switch-btn active" data-lang="zh" onclick="i18n.setLanguage('zh')">中文</button>
+                        <button class="lang-switch-btn" data-lang="en" onclick="i18n.setLanguage('en')">EN</button>
+                    </li>
                 </ul>
                 <button class="mobile-menu-btn" aria-label="菜单">
                     <span></span>
@@ -296,6 +301,7 @@
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

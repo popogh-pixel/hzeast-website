@@ -151,6 +151,34 @@ img {
     box-shadow: var(--shadow);
 }
 
+/* 语言切换器 */
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--background);
+}
+
+.lang-switch-btn {
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-switch-btn:hover,
+.lang-switch-btn.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -174,7 +202,9 @@ img {
    =================================== */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    /* Banner 背景图片 */
+    background: linear-gradient(135deg, rgba(139,115,85,0.8) 0%, rgba(196,176,154,0.8) 100%), 
+                url('../uploads/upload_0.jpg') center/cover no-repeat;
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -188,7 +218,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .hero-content {
