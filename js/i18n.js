@@ -18,9 +18,23 @@ const i18n = {
             'nav-contact': '联系我们',
             'nav-quote': '获取报价',
             
-            // 首页 Hero
+            // 首页 Hero - Banner 1
             'hero-title': '33 年专业服装制造经验',
             'hero-subtitle': '专注梭织女装、童装，月产能 50,000 件<br>ISO9001 & BSCI 认证，出口欧洲澳洲 30+ 国家',
+            'hero-btn-quote': '📧 获取报价',
+            'hero-btn-products': '👗 查看产品',
+            
+            // 首页 Hero - Banner 2
+            'hero-title-2': '专业团队，精湛工艺',
+            'hero-subtitle-2': '141 名熟练工人，5 人技术团队<br>严格质量控制，确保每件产品完美',
+            'hero-btn-about': '🏭 了解我们',
+            'hero-btn-process': '📋 生产流程',
+            
+            // 首页 Hero - Banner 3
+            'hero-title-3': '优质面料，多样选择',
+            'hero-subtitle-3': '全球采购优质面料<br>梭织女装、童装，款式多样',
+            
+            // 统计数据
             'hero-stats-year': '成立年份',
             'hero-stats-capacity': '月产能 (件)',
             'hero-stats-workers': '熟练工人',
@@ -90,9 +104,23 @@ const i18n = {
             'nav-contact': 'Contact',
             'nav-quote': 'Get Quote',
             
-            // Hero
+            // Hero - Banner 1
             'hero-title': '33 Years of Professional Garment Manufacturing',
             'hero-subtitle': 'Specializing in woven women\'s and children\'s clothing, monthly capacity 50,000 pieces<br>ISO9001 & BSCI certified, exporting to 30+ countries in Europe and Australia',
+            'hero-btn-quote': '📧 Get Quote',
+            'hero-btn-products': '👗 View Products',
+            
+            // Hero - Banner 2
+            'hero-title-2': 'Professional Team, Expert Craftsmanship',
+            'hero-subtitle-2': '141 skilled workers, 5-person technical team<br>Strict quality control for perfect products',
+            'hero-btn-about': '🏭 About Us',
+            'hero-btn-process': '📋 Our Process',
+            
+            // Hero - Banner 3
+            'hero-title-3': 'Quality Fabrics, Diverse Selection',
+            'hero-subtitle-3': 'Premium fabrics sourced globally<br>Women\'s and children\'s woven wear, diverse styles',
+            
+            // Stats
             'hero-stats-year': 'Founded',
             'hero-stats-capacity': 'Monthly Capacity (pcs)',
             'hero-stats-workers': 'Skilled Workers',
@@ -168,7 +196,7 @@ const i18n = {
         }
     },
     
-    // 更新页面语言（只影响导航栏和 Logo）
+    // 更新页面语言（全站切换）
     updatePageLanguage() {
         document.documentElement.lang = this.currentLang;
         
@@ -186,13 +214,15 @@ const i18n = {
             if (logoEn) logoEn.style.display = 'none';
         }
         
-        // 2. 只更新导航栏的翻译
-        const navLinks = document.querySelectorAll('.nav-link, .btn-quote');
-        navLinks.forEach(element => {
+        // 2. 更新所有带 data-i18n 属性的元素（全站）
+        document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (key) {
-                const translation = this.translations[this.currentLang][key];
-                if (translation) {
+            const translation = this.translations[this.currentLang][key];
+            
+            if (translation) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
                     element.innerHTML = translation;
                 }
             }
@@ -206,8 +236,7 @@ const i18n = {
             }
         });
         
-        console.log('Navigation language updated to:', this.currentLang);
-        console.log('Note: Only navigation bar and logo change language. Main content stays in Chinese.');
+        console.log('Full site language updated to:', this.currentLang);
     },
     
     // 获取翻译
