@@ -59,8 +59,8 @@ const slider = {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🦐 杭州伊斯特服装官网已加载');
     
-    // 初始化轮播
-    slider.init();
+    // 轮播已禁用 - 使用单图 Banner
+    // slider.init();
     
     // 初始化所有模块
     initMobileMenu();

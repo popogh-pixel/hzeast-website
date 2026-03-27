@@ -55,49 +55,19 @@
     </header>
 
     <main>
-        <!-- Hero 轮播 Banner + 文字层 -->
-        <section class="hero-slider">
-            <div class="slider-container">
-                <!-- Banner 1: 蓝色衬衫模特 -->
-                <div class="slider-slide active">
-                    <img src="uploads/upload_0.jpg" alt="服装制造" class="slider-image">
-                    <div class="slider-caption">
-                        <div class="container">
-                            <h1 class="slider-title" data-i18n="hero-title">33 年专业服装制造经验</h1>
-                            <p class="slider-subtitle" data-i18n="hero-subtitle">专注梭织女装，月产能 50,000 件<br>ISO9001 & BSCI 认证，出口欧洲澳洲 30+ 国家</p>
-                            <div class="slider-buttons">
-                                <a href="pages/contact.html" class="btn btn-primary" data-i18n="hero-btn-quote">📧 获取报价</a>
-                                <a href="pages/products.html" class="btn btn-secondary" data-i18n="hero-btn-products">👗 查看产品</a>
-                            </div>
-                        </div>
+        <!-- Hero Banner (单图) -->
+        <section class="hero-banner-single">
+            <img src="uploads/hero banner.jpg" alt="杭州伊斯特服装" class="hero-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-caption">
+                <div class="container">
+                    <h1 class="hero-title" data-i18n="hero-title">33 年专业服装制造经验</h1>
+                    <p class="hero-subtitle" data-i18n="hero-subtitle">专注梭织女装，月产能 50,000 件<br>ISO9001 & BSCI 认证，出口欧洲澳洲 30+ 国家</p>
+                    <div class="hero-buttons">
+                        <a href="pages/contact.html" class="btn btn-primary" data-i18n="hero-btn-quote">📧 获取报价</a>
+                        <a href="pages/products.html" class="btn btn-secondary" data-i18n="hero-btn-products">👗 查看产品</a>
                     </div>
                 </div>
-                <!-- Banner 2: 工厂/车间（文字内嵌在图片中） -->
-                <div class="slider-slide">
-                    <img src="uploads/banner2.jpg" alt="生产车间" class="slider-image">
-                </div>
-                <!-- Banner 3: 产品/面料 -->
-                <div class="slider-slide">
-                    <img src="uploads/upload_0.jpg" alt="面料细节" class="slider-image">
-                    <div class="slider-caption">
-                        <div class="container">
-                            <h1 class="slider-title" data-i18n="hero-title-3">优质面料，多样选择</h1>
-                            <p class="slider-subtitle" data-i18n="hero-subtitle-3">全球采购优质面料<br>梭织女装，款式多样</p>
-                            <div class="slider-buttons">
-                                <a href="pages/contact.html" class="btn btn-primary" data-i18n="hero-btn-quote">📧 获取报价</a>
-                                <a href="pages/products.html" class="btn btn-secondary" data-i18n="hero-btn-products">👗 查看产品</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 轮播控制 -->
-            <button class="slider-prev" onclick="slider.prev()">&#10094;</button>
-            <button class="slider-next" onclick="slider.next()">&#10095;</button>
-            <div class="slider-dots">
-                <span class="dot active" onclick="slider.goToSlide(0)"></span>
-                <span class="dot" onclick="slider.goToSlide(1)"></span>
-                <span class="dot" onclick="slider.goToSlide(2)"></span>
             </div>
         </section>
 
