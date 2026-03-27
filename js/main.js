@@ -10,9 +10,12 @@ const slider = {
     
     init() {
         this.slides = document.querySelectorAll('.slider-slide');
+        console.log('🎠 Slider found', this.slides.length, 'slides');
         if (this.slides.length > 0) {
             this.startAutoPlay();
-            console.log('🎠 Banner slider initialized');
+            console.log('🎠 Banner slider initialized with auto-play');
+        } else {
+            console.warn('⚠️ No slider slides found!');
         }
     },
     
